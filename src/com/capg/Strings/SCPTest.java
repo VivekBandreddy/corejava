@@ -9,5 +9,6 @@ public class SCPTest {
         String gtr = "1234 56" + "!";
 
         System.out.println((str == mtr) == (dtr == gtr));
+        
     }
 }

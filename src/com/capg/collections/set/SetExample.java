@@ -11,19 +11,21 @@ public class SetExample {
         set.add(new Person("John", 25));
         set.add(new Person("Jane", 30));
         set.add(new Person("John", 25));
-        System.out.println(set.size());
-
-        Person p = new Person("tom",20);
+        System.out.println(set.size()); //2
+        System.out.println(set);
+        Person p = new Person("tom", 20);
 
         String name = "abc";
         AtomicReference<String> str = new AtomicReference<>(name);
-        set.stream().filter(s -> s.getName().equals("John")).forEach(s->{
-           str.set(s.getName());
+        set.stream().filter(s -> s.getName().equals("John")).forEach(s -> {
+            str.set(s.getName());
             p.setName("Jerry");
             p.setAge(21);
         });
 
         System.out.println(str.get());
+
+        System.out.println(set);
 
     }
 }
@@ -64,5 +66,13 @@ class Person {
 
     public void setAge(int age) {
         this.age = age;
+    }
+
+    @Override
+    public String toString() {
+        return "Person{" +
+                "name='" + name + '\'' +
+                ", age=" + age +
+                '}';
     }
 }

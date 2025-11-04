@@ -22,5 +22,7 @@ public class GoldenRetriver extends Dog {
     public static void main(String[] args) {
         Animal animal = new GoldenRetriver();
         animal.bark();
+        //Dog is barking
+        //GoldenRetriever is barking
     }
 }

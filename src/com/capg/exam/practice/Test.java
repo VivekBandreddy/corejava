@@ -2,6 +2,8 @@ package com.capg.exam.practice;
 
 import com.capg.java8.Employee;
 
+import java.time.LocalDate;
+
 public class Test {
     public static void main(String[] args) {
         Employee employee = new Employee();
@@ -21,5 +23,8 @@ public class Test {
 
         System.out.println(i);
         System.out.println(j);
+
+        System.out.println(LocalDate.now());
+        System.out.println(LocalDate.now().minusDays(31));
     }
 }

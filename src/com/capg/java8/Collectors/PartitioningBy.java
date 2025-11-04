@@ -10,6 +10,6 @@ public class PartitioningBy {
     public static void main(String[] args) {
         Map<Boolean, List<String>> pMap = Arrays.asList("tom", "cat", "true", "false")
                 .stream().collect(Collectors.partitioningBy(s -> s.startsWith("t")));
-        System.out.println(pMap);
+        System.out.println(pMap); //{false=[cat, false], true=[tom, true]}
     }
 }

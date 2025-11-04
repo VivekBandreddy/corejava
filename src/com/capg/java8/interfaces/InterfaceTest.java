@@ -29,6 +29,7 @@ public class InterfaceTest implements A, B {
 
         TestFI testFI = (i, j) -> i + j;
 
+
         System.out.println(testFI.add(10, 20));
     }
 }

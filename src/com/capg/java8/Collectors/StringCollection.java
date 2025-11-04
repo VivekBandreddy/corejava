@@ -12,6 +12,6 @@ public class StringCollection {
         }
 
         String str = integerList.stream().filter(i -> Integer.valueOf(i) % 2 == 0).collect(Collectors.joining(","));
-        System.out.println(str);
+        System.out.println(str); //0,2,4,6,8
     }
 }

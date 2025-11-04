@@ -15,10 +15,10 @@ public class PrimitiveStreams {
         //integerList.stream().min(System.out::print);
 
         IntStream minStream = IntStream.of(10, 20, 30, 40);
-        System.out.println(minStream.min());
+        System.out.println(minStream.min());//OptionalInt[10]
         IntStream avgStream = IntStream.of(10, 20, 30, 40);
-        System.out.println(avgStream.average());
+        System.out.println(avgStream.average());//OptionalDouble[25.0]
         IntStream maxStream = IntStream.of(10, 20, 30, 999999);
-        System.out.println(maxStream.max());
+        System.out.println(maxStream.max());//OptionalInt[999999]
     }
 }

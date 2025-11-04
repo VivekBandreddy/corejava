@@ -1,7 +1,5 @@
 package com.capg.collections;
 
-import com.sun.source.tree.Tree;
-
 import java.util.HashSet;
 import java.util.LinkedHashSet;
 import java.util.Set;
@@ -11,11 +9,17 @@ public class SetImpl {
 
     public static void main(String[] args) {
         Set<String> hashSet = new HashSet<>();
+
+        hashSet.add("c");
         hashSet.add("Z");
         hashSet.add("a");
         hashSet.add("A");
+        hashSet.add("d");
         hashSet.add("z");
-        System.out.println(hashSet);
+        hashSet.add(null);
+        hashSet.add(null);
+        // hashSet.stream().sorted();
+        System.out.println(hashSet); //[null, a, A, c, d, Z, z]
 
 
         Set<String> linkedHashSet = new LinkedHashSet<>();
@@ -23,14 +27,23 @@ public class SetImpl {
         linkedHashSet.add("Z");
         linkedHashSet.add("a");
         linkedHashSet.add("z");
-        System.out.println(linkedHashSet);
+        linkedHashSet.add("c");
+        System.out.println(linkedHashSet); //[A, Z, a, z, c]
 
+        Set<String> treeSetNull = new TreeSet<>();
+        try {
+            treeSetNull.add(null); //NPE
+        } catch (NullPointerException npe) {
+            System.out.println("NPE occurred");
+        }
 
         Set<String> treeSet = new TreeSet<>();
         treeSet.add("Z");
         treeSet.add("a");
         treeSet.add("A");
         treeSet.add("z");
-        System.out.println(treeSet);
+        // treeSet.add(null);
+        System.out.println(treeSet); //[A, Z, a, z]
+        //treeSet.
     }
 }

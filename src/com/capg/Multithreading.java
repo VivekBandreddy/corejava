@@ -1,6 +1,6 @@
 package com.capg;
 
-public class multithreading implements Runnable {
+public class Multithreading implements Runnable {
 
     @Override
     public void run() {
@@ -21,10 +21,10 @@ public class multithreading implements Runnable {
     }
 
     public static void main(String[] args) {
-        multithreading multithreading = new multithreading();
+        Multithreading multithreading = new Multithreading();
         Thread thread = new Thread(multithreading, "alphabets");
         thread.start();
-        Thread thread2 = new Thread(new multithreading());
+        Thread thread2 = new Thread(new Multithreading());
         thread2.start();
     }
 }
